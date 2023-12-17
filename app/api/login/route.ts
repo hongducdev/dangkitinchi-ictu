@@ -4,7 +4,6 @@ import { CookieJar } from "tough-cookie";
 import { createHash } from "crypto";
 import { JSDOM } from "jsdom";
 import * as cookie from "cookie";
-import { headers } from "next/headers";
 
 const jar = new CookieJar();
 
@@ -84,7 +83,7 @@ export const POST = async (request: Request) => {
   return new Response(
     JSON.stringify({
       error: false,
-      message: "Login success!",
+      message: "Đăng nhập thành công!",
     }),
     {
       headers: {
